@@ -35,7 +35,7 @@ var DataBindingExCtrl =  function($scope, testUtils) {
 		];
 	};
 };
-DataBindingExCtrl.$inject = [ '$scope', '$timeout', 'TestUtils' ];
+DataBindingExCtrl.$inject = [ '$scope', 'TestUtils' ];
 
 /** expressions_ex controller */
 var ExpressionsExCtrl = function($scope, testUtils) {

@@ -24,7 +24,7 @@
 	    </a>
 	    
 	    <div class="header" ng-show="slides[slideIndex].title">
-	        <h1 class="title" ng-bind-html-unsafe="slides[slideIndex].title"></h1>
+	        <h1 class="title" ng-bind-html-unsafe="slideIndex + '. ' + slides[slideIndex].title"></h1>
 	    </div>
 	    
 	    <div ng-view></div>
