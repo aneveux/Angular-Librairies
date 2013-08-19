@@ -1,0 +1,290 @@
+ {
+	"js": {
+	
+	},
+	"html": {
+		"$": {
+			"c": {
+				"suggestions": [
+					{
+						"name": "ng-click=\"\"",
+						"autoInsert": true,
+						"replace": true,
+						"cursorPosition": -1
+					}
+				]
+			},
+			"r": {
+				"suggestions": [
+					{
+						"name": "ng-repeat=\" in \"",
+						"autoInsert": true,
+						"replace": true,
+						"cursorPosition": -5
+					}
+				]
+			},
+			"else": {
+			
+			 }
+		},
+		"<": {
+			"suggestions": [
+				"html elements"
+			]
+		},
+		">": {
+			
+		},
+		" ": {
+			"/": {
+				"<": {
+				
+				}
+			},
+			"<": {
+				"suggestions": [
+					"directives",
+					"html attributes"
+				]
+			},
+			">": {
+			
+			}
+		},
+		"{": {
+			"{": {
+				"suggestions": [
+					"scope"
+				]
+			},
+			"else": {
+				"suggestions": [
+					{
+						"name": "{}}",
+						"autoInsert": true,
+						"replace": false,
+						"cursorPosition": -2
+					}
+				]
+			}
+		}
+	},
+	"categories": {
+		"html elements": {
+			"defaultSuffix": " ",
+			"list": {
+				"b": {
+					"suffix": "></b>",
+					"cursorPosition": -4
+				},
+				"br": {
+					"suffix": "/>"
+				},
+				"button": {
+				
+				},
+				"div": {
+				
+				},
+				"i": {
+					"suffix": "></i>",
+					"cursorPosition": -4
+				},
+				"input": {
+					"suffix": " />",
+					"cursorPosition": -2
+				},
+				"select": {
+				
+				},
+				"span": {
+					
+				},
+				"table": {
+				
+				}
+			}
+		},
+		"html attributes": {
+			"defaultSuffix": "=\"\"",
+			"defaultCursorPos": -1,
+			"defaultAddWhitespace": true,
+			"list": {
+				"id": {
+				
+				},
+				"title": {
+				
+				},
+				"class": {
+				
+				},
+				"style": {
+				
+				}
+				
+			}
+		},
+		"directives": {
+			
+			"defaultSuffix": "=\"\"",
+			"defaultCursorPos": -1,
+			"defaultAddWhitespace": true,
+			"list": {
+				"ng-app": {
+					"doc": "Use this directive to auto-bootstrap an application. Only one <b>ngApp</b> directive can be used per HTML document. The directive designates the root of the application and is typically placed at the root of the page."
+				},
+				"ng-bind": {
+					"doc": "Replaces the text content of the specified HTML element with the value of a given expression, and to update the text content when the value of that expression changes."
+				},
+				"ng-bind-html": {
+					"doc": "Creates a binding that will <i>innerHTML</i> the result of evaluating the expression into the current element in a secure way."
+				},
+				"ng-bind-html-unsafe": {
+					"doc": "Same as <i>ng-bind-html</i>, but without control on the inserted html content."
+				},
+				"ng-change": {
+					"doc": "Evaluates given expression when user changes the input.<br/><br/><pre><code>&lt;input ng-change=\"{expression}\"/&gt;</code></pre>"
+				},
+				"ng-checked": {
+					"doc": "Expression evaluated when the input is checked/unchecked.<br/><br/><pre><code>&lt;input ng-checked=\"{expression}\"/&gt;</code></pre>"
+				},
+				"ng-class": {
+					"doc": "Sets CSS classes on HTML an element dynamically.<br/><br/><pre><code>&lt;any ng-class=\"{ btn: true, btn-active: isActive(user) }\"&gt;...&lt;/any&gt;</code></pre>"
+				},
+				"ng-click": {
+					"doc": "Allows you to specify custom behavior when element is clicked."
+				},
+				"ng-dblclick": {
+					"doc": "Specifies custom behavior on dblclick event."
+				},
+				"ng-cloak": {
+					"doc": "Used to prevent the Angular html template from being briefly displayed by the browser in its uncompiled form while your application is loading."
+				},
+				"ng-controller": {
+					"doc": "Links a part of the HTML DOM to a controller."
+				},
+				"ng-csp": {
+					"restrict": "html"
+				},
+				"ng-disabled": {
+					
+				},
+				"ng-form": {
+					"restrict": "form"
+				},
+				"ng-hide": {
+				
+				},
+				"ng-show": {
+				
+				},
+				"ng-hide": {
+				
+				},
+				"ng-href": {
+				
+				},
+				"ng-include": {
+				
+				},
+				"ng-init": {
+				
+				},
+				"ng-if": {
+					"doc": "Removes and/or recreates a portion of the DOM tree conditionally.<br/><br/><pre><code>&lt;span ng-if=\"checked\"&gt;Checkbox is checked.&lt;/span&gt;</code></pre>"
+				},
+				"ng-pattern": {
+				
+				},
+				"ng-list": {
+				
+				},
+				"ng-true-value": {
+				
+				},
+				"ng-false-value": {
+				
+				},
+				"ng-model": {
+				
+				},
+				"ng-mousedown": {
+				
+				},
+				"ng-mouseenter": {
+				
+				},
+				"ng-mouseleave": {
+				
+				},
+				"ng-mousemove": {
+				
+				},
+				"ng-mouseover": {
+				
+				},
+				"ng-mouseup": {
+				
+				},
+				"ng-multiple": {
+					"restrict": "select"
+				},
+				"ng-non-bindable": {
+				
+				},
+				"ng-options": {
+				
+				},
+				"ng-pluralize": {
+				
+				},
+				"ng-readonly": {
+				
+				},
+				"ng-repeat": {
+				
+				},
+				"ng-selected": {
+				
+				},
+				"ng-src": {
+				
+				},
+				"ng-style": {
+				
+				},
+				"ng-submit": {
+				
+				},
+				"ng-switch": {
+				
+				},
+				"ng-switch-when": {
+				
+				},
+				"ng-switch-default": {
+				
+				},
+				"ng-transclude": {
+				
+				},
+				"ng-view": {
+				
+				}
+				
+			}
+		},
+		"filters": {
+		
+		},
+		"functions": {
+		
+		},
+		"services": {
+		
+		}
+		
+	}
+}
