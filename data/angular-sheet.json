@@ -24,6 +24,16 @@
 					}
 				]
 			},
+			"m": {
+				"suggestions": [
+					{
+						"name": "ng-model=\"\"",
+						"autoInsert": true,
+						"replace": true,
+						"cursorPosition": -1
+					}
+				]
+			},
 			"else": {
 			
 			 }

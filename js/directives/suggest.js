@@ -122,20 +122,28 @@ var CompletionService = function($http) {
 		properties = data;
 	});
 	
-	var getScopes = function() {
+	/*var getScopes = function() {
 		var elements = document.getElementsByClassName('ng-scope');
 		var trueElements = [];
 		var scopes = [];
 		for (var index = 0; index < elements.length; index++) {
 			var element = elements[index];
 			var scope = angular.element(element).scope();
-			if (scope.price != undefined) {
+			if (scope.myValue != undefined) {
 				scopes.push(scope);
 				trueElements.push(element);
 			}
 		}
 		console.log(trueElements);
 		return scopes;
+	};*/
+	
+	this.getScopeProperties = function(pContent) {
+		// TODO: check another notations, and if the controller element wraps our current element.
+		/*var hasController = pContent.indexOf('ng-controller');
+		if (hasController) {
+			
+		}*/
 	};
 
 	/** Returns parse properties for a given type. */
