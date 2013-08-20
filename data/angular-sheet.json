@@ -1,6 +1,14 @@
  {
 	"js": {
-	
+		"$": {
+			"suggestions": [
+				{
+					"name": "$scope",
+					"compare": "scope"
+				},
+				"services"
+			]
+		}
 	},
 	"html": {
 		"$": {
@@ -154,11 +162,14 @@
 				"ng-bind-html-unsafe": {
 					"doc": "Same as <i>ng-bind-html</i>, but without control on the inserted html content."
 				},
+				"ng-blur": {
+					"doc": "Specifies custom behavior on blur event."
+				},
 				"ng-change": {
-					"doc": "Evaluates given expression when user changes the input.<br/><br/><pre><code>&lt;input ng-change=\"{expression}\"/&gt;</code></pre>"
+					"doc": "Evaluates given expression when user changes the input.<br/><br/><pre><code>&lt;input ng-change=\"expression\"/&gt;</code></pre>"
 				},
 				"ng-checked": {
-					"doc": "Expression evaluated when the input is checked/unchecked.<br/><br/><pre><code>&lt;input ng-checked=\"{expression}\"/&gt;</code></pre>"
+					"doc": "Expression evaluated when the input is checked/unchecked.<br/><br/><pre><code>&lt;input ng-checked=\"expression\"/&gt;</code></pre>"
 				},
 				"ng-class": {
 					"doc": "Sets CSS classes on HTML an element dynamically.<br/><br/><pre><code>&lt;any ng-class=\"{ btn: true, btn-active: isActive(user) }\"&gt;...&lt;/any&gt;</code></pre>"
@@ -176,37 +187,32 @@
 					"doc": "Links a part of the HTML DOM to a controller."
 				},
 				"ng-csp": {
-					"restrict": "html"
+					"restrict": "html",
+					"doc": "Used when developing things like Google Chrome Extensions."
 				},
 				"ng-disabled": {
-					
+					"doc": "Makes a button enabled/disabled. Resolves compatibility issues with IE8/older IEs.<br/><br/><pre><code>&lt;input ng-disabled=\"expression\"/&gt</code></pre>"
+				},
+				"ng-focus": {
+					"doc": "Specifies custom behavior on focus event.<br/><br/><pre><code>&lt;a/input/select/textarea ng-focus=\"expression\"&gt;...&lt/a/input/select/textarea&gt;</code></pre>"
 				},
 				"ng-form": {
 					"restrict": "form"
 				},
 				"ng-hide": {
-				
-				},
-				"ng-show": {
-				
-				},
-				"ng-hide": {
-				
+					"doc": "Shows/hides the given HTML element conditionally.<br/><br/><pre><code>&lt;div ng-hide=\"bHideDiv\"&gt;Hidden if $scope.bHideDiv == true&lt;/div&gt;</code></pre>"
 				},
 				"ng-href": {
-				
+					"doc": "Replaces <i>href</i> used with angular expressions, to solve broken links problems when the page is loading."
 				},
 				"ng-include": {
-				
+					"doc": "Fetches, compiles and includes an external HTML fragment.<br/><br/><pre><code>&lt;ng-include src=\"...\" onload=\"...\" autoscroll=\"...\"/&gt;</code></pre>"
 				},
 				"ng-init": {
-				
+					"doc": "Specifies initialization tasks to be executed before the template enters execution mode during bootstrap.<br/><br/><pre><code>&lt;div ng-init=\"myVar = 10\"&gt;...&lt;/div&gt;</code></pre>"
 				},
 				"ng-if": {
-					"doc": "Removes and/or recreates a portion of the DOM tree conditionally.<br/><br/><pre><code>&lt;span ng-if=\"checked\"&gt;Checkbox is checked.&lt;/span&gt;</code></pre>"
-				},
-				"ng-pattern": {
-				
+					"doc": "Removes and/or recreates a portion of the DOM tree conditionally.<br/><br/><pre><code>&lt;span ng-if=\"checked\"&gt;checked is true.&lt;/span&gt;</code></pre>"
 				},
 				"ng-list": {
 				
@@ -218,33 +224,36 @@
 				
 				},
 				"ng-model": {
-				
+					"doc": "Does two-way data binding with a form element.<br/><br/><pre><code>&lt;input ng-model=\"login\"/&gt;</code></pre>"
 				},
 				"ng-mousedown": {
-				
+					"doc": "Specifies custom behavior on <i>mousedown</i> event."
 				},
 				"ng-mouseenter": {
-				
+					"doc": "Specifies custom behavior on <i>mouseenter</i> event."
 				},
 				"ng-mouseleave": {
-				
+					"doc": "Specifies custom behavior on <i>mouseleave</i> event."
 				},
 				"ng-mousemove": {
-				
+					"doc": "Specifies custom behavior on <i>mousemove</i> event."
 				},
 				"ng-mouseover": {
-				
+					"doc": "Specifies custom behavior on <i>mouseover</i> event."
 				},
 				"ng-mouseup": {
-				
+					"doc": "Specifies custom behavior on <i>mouseup</i> event."
 				},
 				"ng-multiple": {
 					"restrict": "select"
 				},
 				"ng-non-bindable": {
-				
+					"doc": "Used to make angular ignore a part of HTML.<br/><br/><pre><code>&lt;div ng-non-bindable&gt;Ignored: {{NotAScopeValue}}&lt;/div&gt;</code></pre>"
 				},
 				"ng-options": {
+				
+				},
+				"ng-pattern": {
 				
 				},
 				"ng-pluralize": {
@@ -257,6 +266,9 @@
 				
 				},
 				"ng-selected": {
+				
+				},
+				"ng-show": {
 				
 				},
 				"ng-src": {
@@ -293,7 +305,77 @@
 		
 		},
 		"services": {
-		
+			"defaultSuffix": ".",
+			"list": {
+				"$anchorScroll": {
+					"suffix": "();",
+					"doc": "Scrolls to html anchor related in <i>$location.hash()</i>.<br/><br/><pre><code>$anchorScroll();</code></pre>",
+					"compare": "anchorScroll"
+				},
+				"$animate": {
+					"compare": "animate"
+				},
+				"$cacheFactory": {
+					"compare": "cacheFactory",
+					"doc": "Constructs cache objects and gives access to them.<br/><br/><pre><code>var cache = $cacheFactory(\"cacheId\");<br/>cache.put( \"key\", \"value\");<br/></code></pre>"
+				},
+				"$compile": {
+					"compare": "compile"
+				},
+				"$controller": {
+					"compare": "controller"
+				},
+				"$document": {
+					"compare": "document"
+				},
+				"$exceptionHandler": {
+					"compare": "exceptionHandler"
+				},
+				"$filter": {
+					"compare": "filter"
+				},
+				"$http": {
+					"compare": "http"
+				},
+				"$httpBackend": {
+					"compare": "httpBackend"
+				},
+				"$interpolate": {
+					"compare": "interpolate"
+				},
+				"$locale": {
+					"compare": "locale"
+				},
+				"$location": {
+					"compare": "location"
+				},
+				"$log": {
+					"compare": "log"
+				},
+				"$parse": {
+					"compare": "parse"
+				},
+				"$q": {
+					"compare": "q"
+				},
+				"$rootElement": {
+					"compare": "rootElement"
+				},
+				"$rootScope": {
+					"compare": "rootScope"
+				},
+				"$templateCache": {
+					"compare": "templateCache"
+				},
+				"$timeout": {
+					"doc": "Wrapper for <i>window.setTimeout</i>.<br/><br/><pre><code>$timeout(fn[, delay][, invokeApply]);</code></pre>",
+					"compare": "timeout"
+				},
+				"$window": {
+					"doc": "A reference to the browser's window object. Better than <i>window</i> for testing.<br/><br/><pre><code>$window.alert(\"Hello\");</code></pre>",
+					"compare": "window"
+				}
+			}
 		}
 		
 	}

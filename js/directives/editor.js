@@ -115,7 +115,8 @@ var FileEditorController = function($scope, window, transclude, location, timeou
 					editor.removeWordLeft();
 				}
 				
-				var codeToInsert = $scope.chosenSuggestion.name.trim();
+				var codeToInsert = $scope.chosenSuggestion.compare == undefined ? 
+						$scope.chosenSuggestion.name.trim() : $scope.chosenSuggestion.compare.trim();
 				
 				// Expression suffix (for example, ="")
 				if ($scope.chosenSuggestion.suffix != undefined) {
@@ -143,6 +144,13 @@ var FileEditorController = function($scope, window, transclude, location, timeou
 			});
 		}
 	});
+	
+	/*var getElementBeforePosition = function(pPosition, pString, pTrim) {
+		var lines = currentFile.content.split('\n');
+		for (var indexRow = pPosition.row; indexRow >= 0; indexRow--) {
+			var line = lines[indexRow];
+		}
+	};*/
 	
 	/** Returns text after given position. */
 	var getTextAfterPosition = function(position) {

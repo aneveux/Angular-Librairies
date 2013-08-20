@@ -86,7 +86,8 @@ var SuggestController = function($scope, $timeout, element) {
 			var filteredSuggestions = [];
 			for (var index = 0; index < $scope.suggestions.length; index++) {
 				var suggestion = $scope.suggestions[index];
-				if (suggestion.name.indexOf($scope.startedWord) == 0) {
+				if (suggestion.name.indexOf($scope.startedWord) == 0 ||
+						(suggestion.compare != undefined && suggestion.compare.indexOf($scope.startedWord) == 0)) {
 					filteredSuggestions.push(suggestion);
 				}
 			}
@@ -204,7 +205,8 @@ var CompletionService = function($http) {
 								if (category != undefined) {
 									for (var key in category) {
 										//Check that the started input matches the suggestion syntax.
-										if (key.indexOf(inputs[0]) == 0) {
+										if (key.indexOf(inputs[0]) == 0 || 
+												(category[key].compare != undefined && category[key].compare.indexOf(inputs[0]) == 0)) {
 											category[key].name = key; // suggestion name
 											category[key].type = suggestionName; // suggestion type (directive, etc...)
 											
@@ -224,6 +226,12 @@ var CompletionService = function($http) {
 											if (category[key].addWhitespace == undefined) {
 												category[key].addWhitespace = 
 													properties.categories[suggestionName].defaultAddWhitespace;
+											}
+											
+											// Replaces currently written string with suggestion
+											if (category[key].replace == undefined) {
+												category[key].replace = 
+													properties.categories[suggestionName].defaultReplace;
 											}
 											
 											list.push(category[key]);
