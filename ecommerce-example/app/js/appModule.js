@@ -3,7 +3,7 @@ define(
 		  'lib/angular/localize', 'lib/angular/ui-bootstrap-tpls-0.4.0', 'lib/angular/angular-fire' ], 
 		function(config, dependencyResolver)
 {
-    var app = angular.module('app', [ 'ngCookies', 'localization', 'firebase', 'ui.bootstrap' ]);
+    var app = angular.module('app', [ 'ngCookies', 'localization', 'firebase', 'ui.bootstrap','ngResource' ]);
 
     app.config(
     [
